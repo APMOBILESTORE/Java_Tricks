@@ -1,0 +1,29 @@
+<!--Search Script-->
+<script>
+function myFunction() {
+  var input = document.getElementById("Search");
+  var filter = input.value.toLowerCase();
+  var nodes = document.getElementsByClassName('target');
+
+  for (i = 0; i < nodes.length; i++) {
+    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+      nodes[i].style.display = "block";
+    } else {
+      nodes[i].style.display = "none";
+    }
+  }
+}
+
+</script>
+<!--Search Script End-->
+
+<!--Search-->
+<table align="center" width="20%">
+  <tr>
+    <td style="padding-right: 10px">
+      <input type="text" id="Search" onkeyup="myFunction()" placeholder="Please enter a search term.." title="Type in a name">
+    </td>
+  </tr>
+</table>
+
+? Note: Type 'target' in content division calss.
